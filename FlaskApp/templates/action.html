@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>LeafLife</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon" />
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/animate.css/animate.min.css" rel="stylesheet" />
+  <link href="static/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="index.html">LeafLife</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href=index.html" class="logo"><img src="static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <!--navbar start -->
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="{{ url_for('index') }}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('index') }}">About</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('index') }}">Features</a></li>
+          <li>
+            <a class="nav-link scrollto" href="{{ url_for('index') }}">Datasets</a>
+          </li>
+          <li><a class="nav-link scrollto" href="{{ url_for('index') }}">Team</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('index') }}">FAQs</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- <h1>Upload an Image</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <button type="submit">Upload</button>
+    </form>
+
+    <div>
+        <h2>Uploaded Image:</h2>
+        <img src="" alt="Uploaded Image" id="uploadedImage">
+    </div>
+
+    <script>
+        const fileInput = document.querySelector('input[type="file"]');
+        const uploadedImage = document.getElementById('uploadedImage');
+
+        fileInput.addEventListener('change', (event) => {
+            const file = event.target.files[0];
+            if (file) {
+                const imageURL = URL.createObjectURL(file);
+                uploadedImage.src = imageURL;
+            }
+        });
+    </script> -->
+
+  <!-- ====== FORM =====-->
+  <div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-8">
+        <h1 class="text-center">Python Flask Upload and Display Image</h1>
+        <div class="form-container">
+          <form method="post" action="/" enctype="multipart/form-data">
+            <div class="form-group">
+              <input type="file" name="file" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-info btn-block">Submit</button>
+            </div>
+          </form>
+        </div>
+        {% if filename %}
+        <div class="mt-4">
+          <img src="{{ url_for('display_image', filename=filename) }}" class="img-fluid" alt="Uploaded Image">
+        </div>
+        {% endif %}
+        <div class="mt-3">
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% endwith %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#">
+                  Contact Us
+                </a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#">Terms of service</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#">Web Design</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#">Web Development</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#">Product Management</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#">Marketing</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i>
+                <a href="#">Graphic Design</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Priyanka Mishra <br />
+              Srichandan Sahu<br />
+              GIET University, India <br /><br />
+              <strong>Phone:</strong> +91 8114705870<br />
+              <strong>Email:</strong> mishra.priyanka3399@gmail.com<br />
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About LEAFLIFE</h3>
+            <p>
+              A cutting-edge, state-of-the-art technology embedded web application to facilitate and the agricultural
+              practices, yielding maximum output.
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/PriyankaPMishra" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.instagram.com/priyankaamishra__/" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/priyankaa-mishra/" class="linkedin"><i
+                  class="bx bxl-linkedin"></i></a>
+              <a href="https://github.com/PriyankaPMishra" class="github"><i class="bx bxl-github"></i></a>
+              <a href="mailto:mishra.priyanka3399@gmail.com" class="email"><i class="bx bx-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>LEAFLIFE</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">Designed by Priyanka & Chandan</div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+</body>
+
+</html>

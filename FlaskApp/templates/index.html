@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>LeafLife</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="static/img/favicon.png" rel="icon" />
+  <link href="static/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/animate.css/animate.min.css" rel="stylesheet" />
+  <link href="static/vendor/aos/aos.css" rel="stylesheet" />
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+  <link href="static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+  <link href="static/vendor/remixicon/remixicon.css" rel="stylesheet" />
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet" />
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo"><a href="index.html">LeafLife</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href=index.html" class="logo"><img src="static/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto" href="#feature">Features</a></li>
+          <li><a class="nav-link scrollto" href="#dataset">Datasets</a></li>
+          <li><a class="nav-link scrollto" href="{{ url_for('action') }}">AI Wizard</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <!-- <li class="dropdown">
+            <a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown">
+                <a href="#"><span>Deep Drop Down</span>
+                  <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li> -->
+          <li><a class="nav-link scrollto" href="#faq">FAQs</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex justify-cntent-center align-items-center">
+    <div id="heroCarousel" data-bs-interval="5000" class="container carousel carousel-fade" data-bs-ride="carousel">
+      <!-- Slide 1 -->
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">
+            Welcome to <span>LEAFLIFE</span>
+          </h2>
+          <p class="animate__animated animate__fadeInUp">
+            Turning leaves into insights: Experience the future of agriculture
+            with our AI-powered Flask app for plant leaf disease detection.
+          </p>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">
+            AI powered Agro-Solution!
+          </h2>
+          <p class="animate__animated animate__fadeInUp">
+            Bridging the gap between plants and AI: Our Flask web app
+            diagnoses leaf diseases with deep learning precision.
+          </p>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+      </a>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <main id="main">
+    <!-- ======= Icon Boxes Section ======= -->
+    <section id="icon-boxes" class="icon-boxes">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-lightning-charge"></i></div>
+              <h4 class="title"><a href="">Instant Diagnosis</a></h4>
+              <p class="description">
+                Receive rapid and accurate plant disease identification, ensuring your foliage thrives in seconds.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+            data-aos-delay="100">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-tools"></i></div>
+              <h4 class="title"><a href="">State-of-the-Art</a></h4>
+              <p class="description">
+                Benefit from cutting-edge technology, ensuring the highest precision and reliability in plant leaf disease diagnosis and management.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+            data-aos-delay="200">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-archive"></i></div>
+              <h4 class="title"><a href="">Diverse Disease Library</a></h4>
+              <p class="description">
+                Access a comprehensive database that covers a wide range of plant leaf diseases, empowering you with knowledge for effective diagnosis and treatment.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="fade-up"
+            data-aos-delay="300">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-display"></i></div>
+              <h4 class="title"><a href="">User-Friendly Interface</a></h4>
+              <p class="description">
+                Experience a highly intuitive design for effortless navigation and a seamless user experience, making plant health management a breeze.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Icon Boxes Section -->
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>
+            Plant leaf disease detection is an "AgroTech" application. It
+            involves the use of advanced algorithms to analyze images of plant
+            leaves and identify diseases. By detecting diseases early, farmers
+            can take prompt measures to prevent crop losses and improve
+            overall agricultural productivity.
+          </p>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>Following are the KEY FEATURES of the website:</p>
+            <ul>
+              <li>
+                <i class="ri-check-double-line"></i> Utilizes state-of-the-art
+                technology
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i> Facilitates early disease
+                diagnosis
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i> Enhances agricultural
+                productivity
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i> Promotes sustainable
+                farming practices
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i> User Friendly Interface
+                for analysis
+              </li>
+              <li>
+                <i class="ri-check-double-line"></i> Provides possible
+                solution
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Plant leaf disease detection is a vital application of computer
+              vision and machine learning in agriculture. It involves the use
+              of advanced algorithms to analyze images of plant leaves and
+              identify diseases or abnormalities. By detecting diseases early,
+              farmers can take prompt measures to prevent crop losses and
+              improve overall agricultural productivity. This aids in timely
+              disease management & also supports sustainable farming practices
+              by reducing the need for excessive pesticide use and promoting
+              more efficient resource allocation.
+            </p>
+            <a href="#" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End About Us Section -->
+
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-5 align-items-stretch position-relative video-box" 
+     style="background-image: url('static/img/why-us.jpg'); background-size: cover; background-repeat: no-repeat; width: 500px; height: 700px;" 
+     data-aos="fade-right">
+</div>
+
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch" data-aos="fade-left">
+            <div class="content">
+              <h3>
+                <strong>WHY IS IT NECESSARY TO DETECT LEAF DISEASE?</strong>
+              </h3>
+              <p>
+                Detecting leaf diseases is essential for preserving crop health, preventing yield loss, and ensuring sustainable agriculture.
+              </p>
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                <li data-aos="fade-up" data-aos-delay="100">
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1"><span>01</span> Why
+                    is plant leaf disease detection
+                    important in agriculture?
+                    <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                    <p>
+                      Plant leaf disease detection is crucial because it helps
+                      farmers identify diseases early, enabling timely
+                      intervention to prevent crop losses and maintain
+                      agricultural productivity.
+                    </p>
+                  </div>
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="200">
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed"><span>02</span> What
+                    role does advanced technology play
+                    in plant leaf disease detection?<i class="bx bx-chevron-down icon-show"></i><i
+                      class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      ML & DL algorithms and computer vision technology are used to analyze images of plant leaves, facilitating the rapid and accurate identification of diseases, which is essential for modern agriculture.
+                    </p>
+                  </div>
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="300">
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed"><span>03</span>
+                    What role does advanced technology play in plant leaf disease detection?
+                    <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      Advanced algorithms and computer vision technology are used to analyze images of plant leaves, facilitating the rapid and accurate identification of diseases, which is essential for modern agriculture.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Why Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="feature" class="services">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>FEATURES</h2>
+          <p>
+            Our dataset boasts a comprehensive collection of images, meticulously sourced to represent a diverse array of plant diseases across multiple crops. From leaves to stems, each image captures distinct disease symptoms, enabling our model to make accurate and informed predictions.Agro Help's dataset spans 40 distinct disease classes, each meticulously labeled and organized.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-box">
+              <i class="bi bi-cloud-upload"></i>
+              <h4><a href="#">Effortless Image Submission</a></h4>
+              <p>
+                Central to our frontend is the user-friendly image upload feature. With just a few clicks,effortlessly upload images of affected plant parts, and initiate the disease detection process seamlessly.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-box">
+              <i class="bi bi-code"></i>
+              <h4><a href="#">Flask Framework</a></h4>
+              <p>
+                At the core of our backend lies Flask, a powerful and versatile web framework. Flask acts as the bridge between user interactions and AI processing, enabling efficient data exchange and smooth communication.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-box">
+              <i class="bi bi-compass"></i>
+              <h4><a href="#">Intuitive Navigation</a></h4>
+              <p>
+                Navigate through Agro Help's array of purpose-driven pages with intuitive ease. From the welcoming homepage to the insightful result page, and from the informative about section to the interactive contact page, each element is strategically placed for effortless navigation.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon-box">
+              <i class="bi bi-image"></i>
+              <h4><a href="#">Image Processing and Transformation</a></h4>
+              <p>
+                When a user uploads an image, the backend swings into action. It handles image transformation and preprocessing, ensuring that the AI model receives the data it needs to perform accurate disease detection.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon-box">
+              <i class="bi bi-lightbulb"></i>
+              <h4><a href="#">Cultivating Insights</a></h4>
+              <p>
+                Once an image is uploaded, the frontend acts as the conduit between user and AI. It elegantly facilitates the transfer of image data to the backend, setting the stage for rapid and accurate disease detection.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="600">
+            <div class="icon-box">
+              <i class="bi bi-arrow-repeat"></i>
+              <h4><a href="#">Continuous Improvement</a></h4>
+              <p>
+                LeafLife's backend is a dynamic component that's constantly evolving. We fine-tune its processes, optimize interactions, and seek ways to enhance the user experience and disease detection accuracy.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container">
+        <div class="row" data-aos="zoom-in">
+          <div class="col-lg-9 text-center text-lg-start">
+            <h3>AI Wizard</h3>
+            <p>
+              Explore our advanced plant disease detection system and diagnose and ensure the health of your crops. We provide accurate diagnoses to help you protect your plants.
+            </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="{{ url_for('action') }}">Check Your Plant</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Cta Section -->
+
+
+    <!-- ======= Portfoio Section ======= -->
+    <section id="dataset" class="portfoio">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>DIVERSIFIED PLANTS</h2>
+          <p>
+            Introducing "diversified plants" that comprises of 12 distinct plant species, exhibiting a wide range of 40 unique disease/healthy classes. This rich diversity not only mirrors the complexity of real-world agricultural scenarios but also underscores the need for a robust and adaptable predictive model to address the multifaceted challenges of plant health management. With this comprehensive dataset, it aims to develop a versatile solution capable of accurately diagnosing and mitigating diseases across a broad spectrum of plant species, contributing to sustainable and resilient agriculture.
+          </p>
+        </div>
+
+        <!-- <div class="row">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-app">App</li>
+              <li data-filter=".filter-card">Card</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div> -->
+
+        <div class="row portfolio-container">
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="static/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="apple" />
+            <div class="portfolio-info">
+              <h4>APPLE</h4>
+              <a href="static/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Apple is a widely cultivated fruit known for its crisp and sweet taste, coming in various varieties and colors. It's a rich source of dietary fiber and vitamins, making it a popular and healthy snack option."><i class="bx bx-plus"></i></a>
+              <!-- <a href="{{ url_for('portfolio_details') }}" class="details-link" title="More Details"><i class="bx bx-link"></i></a> -->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="static/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="cherry" />
+            <div class="portfolio-info">
+              <h4>CHERRY</h4>
+              <a href="static/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="
+                Cherries are small, flavorful fruits enjoyed for their sweet or tart taste and are used in various culinary dishes and desserts."><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="static/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="corn" />
+            <div class="portfolio-info">
+              <h4>CORN</h4>
+              <a href="static/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="
+                Corn, a staple crop, is prized for its starchy kernels and diverse uses in human and animal consumption, as well as industrial applications."><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="static/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="grape" />
+            <div class="portfolio-info">
+              <h4>GRAPES</h4>
+              <a href="static/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="
+                Grapes are small, juicy fruits known for their sweet or tart flavor, often used for making wine, juices, and as a fresh snack."><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="static/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="orange" />
+            <div class="portfolio-info">
+              <h4>ORANGE</h4>
+              <a href="static/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Oranges are citrus fruits celebrated for their vibrant color, refreshing taste, and high vitamin C content, making them a nutritious choice."><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <img src="static/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="peach" />
+            <div class="portfolio-info">
+              <h4>PEACH</h4>
+              <a href="static/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="
+                Peaches are fuzzy-skinned fruits renowned for their sweet, juicy flesh, commonly consumed fresh and used in desserts and preserves."><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="static/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="bell pepper" />
+            <div class="portfolio-info">
+              <h4>BELL PEPPER</h4>
+              <a href="static/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Bell peppers, available in various colors, are versatile vegetables used in cooking for their mild, crisp texture and vibrant flavors."><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="static/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="potato" />
+            <div class="portfolio-info">
+              <h4>POTATO</h4>
+              <a href="static/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Potatoes, a staple in many cuisines, are versatile tubers cherished for their starchy, neutral taste and wide culinary applications."><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <img src="static/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="squash" />
+            <div class="portfolio-info">
+              <h4>PUMPKIN</h4>
+              <a href="static/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Squash refers to a group of vegetables with tender, edible skins and flesh, enjoyed for their mild, nutty flavor in cooking."><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="static/img/portfolio/portfolio-10.jpg" class="img-fluid" alt="strawberry" />
+            <div class="portfolio-info">
+              <h4>STRAWBERRY</h4>
+              <a href="static/img/portfolio/portfolio-10.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Strawberries are sweet, red berries known for their juicy, aromatic taste, commonly enjoyed fresh, in desserts, and as a garnish."><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="static/img/portfolio/portfolio-11.jpg" class="img-fluid" alt="tea" />
+            <div class="portfolio-info">
+              <h4>TEA</h4>
+              <a href="static/img/portfolio/portfolio-11.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="The tea plant, Camellia sinensis, is the source of tea leaves for making various types of tea, including green, black, and oolong, prized for their distinct flavors and aromas."><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <img src="static/img/portfolio/portfolio-12.jpg" class="img-fluid" alt="tomato" />
+            <div class="portfolio-info">
+              <h4>TOMATO</h4>
+              <a href="static/img/portfolio/portfolio-12.jpg" data-gallery="portfolioGallery"
+                class="portfolio-lightbox preview-link" title="Tomatoes, versatile fruits, are used in countless dishes globally for their rich, savory flavor, often mistaken as vegetables."><i class="bx bx-plus"></i></a>
+              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Portfoio Section -->
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>
+            “Teams are incredible things. No task is too great, no
+            accomplishment too grand, no dream too far-fetched for a team. It
+            takes teamwork to make the dream work.” — John Maxwell
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member d-flex align-items-start">
+              <div class="pic">
+                <img src="static/img/team/team-1.jpg" class="img-fluid" alt="" />
+              </div>
+              <div class="member-info">
+                <h4>Priyanka Mishra</h4>
+                <span>Lead Developer</span>
+                <p>Worked on building model and designing the web app.</p>
+                <div class="social">
+                  <a href="https://github.com/PriyankaPMishra"><i class="bi bi-github"></i></a>
+                  <a href="https://www.linkedin.com/in/priyankaa-mishra/"> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="mailto:mishra.priyanka3399@gmail.com"> <i class="bi bi-envelope"></i></a>
+                  <a href="https://www.instagram.com/priyankaamishra__/"><i class="ri-instagram-fill"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="member d-flex align-items-start">
+              <div class="pic">
+                <img src="static/img/team/team-2.jpg" class="img-fluid" alt="" />
+              </div>
+              <div class="member-info">
+                <h4>Srichandan Sahu</h4>
+                <span>UI/UX Enthusiast</span>
+                <p>Worked on the User Interface of Web App.</p>
+                <div class="social">
+                  <a href="https://github.com/chandan0810"><i class="bi bi-github"></i></a>
+                  <a href="https://www.linkedin.com/in/chandan-sahu-9930ba232"><i class="ri-linkedin-box-fill"></i></a>
+                  <a href="sahusrichandan@gmail.com"><i class="bi bi-envelope"></i></a>
+                  <a href="https://instagram.com/ig._.chandan?igshid=MzMyNGUyNmU2YQ=="><i class="ri-instagram-fill"></i></a>
+                </div>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Team Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up" data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">What are the major challenges facing agriculture today?
+                <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  Major challenges include climate change, water scarcity, soil degradation, and pest/disease outbreaks.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">What role does technology play in addressing agricultural challenges?
+                <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Technology, including IoT, AI, and precision agriculture, can optimize resource use, improve crop monitoring, and enhance overall farm management.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">How can ML and DL algorithms improve crop yield and quality?
+                <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  ML and DL can analyze vast amounts of agricultural data to optimize planting schedules, monitor crop health, and predict disease outbreaks, ultimately enhancing yield and quality.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">How can ML assist in pest and disease detection in crops?
+                <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  ML algorithms can analyze images of crops to identify signs of pests and diseases early, allowing for timely interventions and reducing crop losses.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-help-circle icon-help"></i>
+              <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">What challenges are associated with implementing ML and DL in agriculture?
+                <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Challenges include data quality and availability, accessibility for small-scale farmers, and the need for specialized expertise in ML/DL adoption.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- End Frequently Asked Questions Section -->
+  </main>
+  <!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#hero">Home</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#about">About us</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#feature">Features</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#dataset">DataSet</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="{{ url_for('action')}}">AI Wizard</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li>
+                <i class="bx bx-chevron-right"></i><a href="#dataset">Dataset Generation</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="{{url_for('action')}}">AI Wizard</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i><a href="https://github.com/PriyankaPMishra">Documentation</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i> <a href="#team">Our Team</a>
+              </li>
+              <li>
+                <i class="bx bx-chevron-right"></i><a href="#team">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Priyanka Mishra <br />
+              Srichandan Sahu<br />
+              GIET University, India <br /><br />
+              <strong>Phone:</strong> +91 8114705870<br />
+              <strong>Email:</strong> mishra.priyanka3399@gmail.com<br />
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-info">
+            <h3>About LEAFLIFE</h3>
+            <p>
+              A cutting-edge, state-of-the-art technology embedded web application to facilitate and the agricultural practices, yielding maximum output.
+            </p>
+            <div class="social-links mt-3">
+              <a href="https://twitter.com/PriyankaPMishra" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.instagram.com/priyankaamishra__/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/priyankaa-mishra/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://github.com/PriyankaPMishra" class="github"><i class="bx bxl-github"></i></a>
+              <a href="mailto:mishra.priyanka3399@gmail.com" class="email"><i class="bx bx-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>LEAFLIFE</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/anyar-free-multipurpose-one-page-bootstrap-theme/ -->
+        Designed by Priyanka & Chandan
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+</body>
+
+</html>
