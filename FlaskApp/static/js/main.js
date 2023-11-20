@@ -285,16 +285,4 @@
       mirror: false
     })
   });
-
-    // main.js
-
-  // // JavaScript to toggle the visibility of the file upload form
-  // document.getElementById('showUploadForm').addEventListener('click', function() {
-  //   var uploadFormContainer = document.getElementById('uploadFormContainer');
-  //   if (uploadFormContainer.style.display === 'none' || uploadFormContainer.style.display === '') {
-  //     uploadFormContainer.style.display = 'block';
-  //   } else {
-  //     uploadFormContainer.style.display = 'none';
-  //   }
-  // });
 })()

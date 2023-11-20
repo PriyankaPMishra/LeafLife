@@ -30,9 +30,6 @@
 
   <!-- Template Main CSS File -->
   <link href="static/css/style.css" rel="stylesheet" />
-
-
-
 </head>
 
 <body>
@@ -49,11 +46,8 @@
           <li><a class="nav-link scrollto active" href="{{ url_for('index') }}">Home</a></li>
           <li><a class="nav-link scrollto" href="{{ url_for('index') }}">About</a></li>
           <li><a class="nav-link scrollto" href="{{ url_for('index') }}">Features</a></li>
-          <li>
-            <a class="nav-link scrollto" href="{{ url_for('index') }}">Datasets</a>
-          </li>
+          <li><a class="nav-link scrollto" href="{{ url_for('index') }}">Datasets</a></li>
           <li><a class="nav-link scrollto" href="{{ url_for('index') }}">Team</a></li>
-          <li><a href="blog.html">Blog</a></li>
           <li><a class="nav-link scrollto" href="{{ url_for('index') }}">FAQs</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -63,37 +57,13 @@
   </header>
   <!-- End Header -->
 
-  <!-- <h1>Upload an Image</h1>
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-        <input type="file" name="image" accept="image/*" required>
-        <button type="submit">Upload</button>
-    </form>
-
-    <div>
-        <h2>Uploaded Image:</h2>
-        <img src="" alt="Uploaded Image" id="uploadedImage">
-    </div>
-
-    <script>
-        const fileInput = document.querySelector('input[type="file"]');
-        const uploadedImage = document.getElementById('uploadedImage');
-
-        fileInput.addEventListener('change', (event) => {
-            const file = event.target.files[0];
-            if (file) {
-                const imageURL = URL.createObjectURL(file);
-                uploadedImage.src = imageURL;
-            }
-        });
-    </script> -->
-
   <!-- ====== FORM =====-->
   <div class="container">
     <div class="row justify-content-center mt-5">
       <div class="col-md-8">
         <h1 class="text-center">Python Flask Upload and Display Image</h1>
         <div class="form-container">
-          <form method="post" action="/" enctype="multipart/form-data">
+          <form method="post" action="/predict" enctype="multipart/form-data">
             <div class="form-group">
               <input type="file" name="file" class="form-control" required>
             </div>
@@ -112,7 +82,7 @@
           {% if messages %}
           <ul>
             {% for message in messages %}
-            <li>{{ message }}</li>
+            <li>{{ message | safe}}</li>
             {% endfor %}
           </ul>
           {% endif %}
@@ -121,9 +91,6 @@
       </div>
     </div>
   </div>
-
-
-
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
@@ -159,22 +126,19 @@
             <h4>Our Services</h4>
             <ul>
               <li>
-                <i class="bx bx-chevron-right"></i> <a href="#">Web Design</a>
+                <i class="bx bx-chevron-right"></i><a href="#dataset">Dataset Generation</a>
               </li>
               <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="#">Web Development</a>
+                <i class="bx bx-chevron-right"></i> <a href="{{url_for('action')}}">AI Wizard</a>
               </li>
               <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="#">Product Management</a>
+                <i class="bx bx-chevron-right"></i><a href="https://github.com/PriyankaPMishra">Documentation</a>
               </li>
               <li>
-                <i class="bx bx-chevron-right"></i> <a href="#">Marketing</a>
+                <i class="bx bx-chevron-right"></i> <a href="#team">Our Team</a>
               </li>
               <li>
-                <i class="bx bx-chevron-right"></i>
-                <a href="#">Graphic Design</a>
+                <i class="bx bx-chevron-right"></i><a href="#team">Contact Us</a>
               </li>
             </ul>
           </div>
