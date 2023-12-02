@@ -6,7 +6,7 @@ Leaflife is a user-friendly Web Application built using Flask, HTML, CSS, JS and
 
 The dataset utilized for training the Leaflife model comprises meticulously collected images encompassing 40 diverse classes of plant leaf diseases across a spectrum of 12 plant species. With 22,911 images carefully curated and labeled, this dataset offers a robust foundation for training and validating the CNN model. The extensive variety of diseases and plant species covered in the dataset facilitates a comprehensive understanding and classification of various leaf ailments, ensuring the model's accuracy and versatility.
 
-![Sample Images](https://www.canva.com/design/DAF11nTmIro/e766hGWmmyg8IdlsB2_jfw/edit?referrer=photo-collages-landing-page)
+<img src="Plant/7.png" alt="Sample Images" width="400" height="600">
 
 ## Model
 
@@ -22,9 +22,9 @@ The model powering Leaflife is a convolutional neural network (CNN) architecture
 
 ### HOMEPAGES
 
-![HOME PAGE1](Plant/Screenshot 2023-11-18 114044.png)
-![HOME PAGE2](Plant/Screenshot 2023-11-18 114242.png)
-![HOME PAGE3](Plant/Screenshot 2023-11-18 114158.png)
+![HOME PAGE1](Plant/4.png)
+![HOME PAGE2](Plant/6.png)
+![HOME PAGE3](Plant/5.png)
 
 ### AI WIZARD
 
